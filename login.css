@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost' , sans-serif;
+    background: linear-gradient(to bottom, #c8ee76, #CCF0D1);
+}
+
+.main {
+    width: 350px;
+    height: 500px;
+    background: #B5E550;
+}
+
+#chk {
+    display: none;
+}
+
+.signup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+label {
+    color: black;
+    font-size: 1.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+input {
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: black;
+    background: white;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c9f075;
+}
+
+.Login {
+    height: 460px;
+    background: #d7f793;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+
+.Login label {
+    color: black;
+    transform: scale(.6);
+}
+
+.Login .forgot-password {
+    color: black; /* Set font color to white */
+    text-decoration: underline; /* Add underline to mimic link */
+    font-size: 0.7em; /* Adjust font size */
+    display: block; /* Make it a block-level element */
+    text-align: center; /* Center align the text */
+    margin-top: 10px; /* Add some top margin for spacing */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+/* Add hover effect */
+.Login .forgot-password:hover {
+    color: #f0f0f0; /* Change font color on hover */
+}
+
+#chk:checked ~ .Login {
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .Login label {
+    transform: scale(1);
+}
+
+#chk:checked ~ .signup label {
+    transform: scale(.8);
+}

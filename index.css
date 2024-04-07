@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    background-color: #B5E550;
+    font-family: sans-serif;
+}
+
+.top-bar {
+    background-color: #d7f793;
+    text-align: right;
+    padding: 10px;
+}
+
+.user-icon {
+    font-size: 2em;
+    color: black;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .user-icon {
+        font-size: 1.5em;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute; /* Change position to absolute */
+    top: calc(100% + 10px); /* Position it below the user icon */
+    right: 0; /* Position from the right */
+    background-color: #bbec83; /* Green background color */
+    min-width: 190px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.dropdown-content a {
+    color: black; /* Black text color */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #dcedc8; /* Light green hover color */
+}
+
+.show {
+    display: block;
+}
+
+.bottom-bar {
+    background-color: #d7f793;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for separation */
+}
+
+.bottom-bar .icon {
+    font-size: 2.5em;
+    padding: 10px;
+    border-radius: 100%;
+    color: #666666; /* Default icon color */
+}
+
+.bottom-bar .icon.active {
+    color: white;
+    background-color: #f0f0f0; /* Active icon background color */
+    border: 7px solid #f0f0f0; /* Active icon border color */
+}
+
+.add-content .page-image {
+    max-width: 200px; /* Adjust image size */
+    height: auto;
+}
+
+.home-content .qr-code {
+    max-width: 200px; /* Adjust image size */
+    height: auto;
+    margin-top: 20px; /* Adjust margin-top as needed */
+    display: block; /* Ensure it's a block-level element for centering */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Add a new class for the balance display */
+.balance-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; /* Adjust margin-top as needed */
+}
+
+/* Make the icon bigger and center it */
+.home-content .wallet-icon {
+    color: #339111;
+    font-size: 7em; /* Adjust the font size as needed */
+    margin-top: 50px; /* Adjust the top margin */
+    text-align: center; /* Center the icon */
+    justify-content: center;
+}
+
+/* Center the balance text */
+.balance-text {
+    font-size: 2em; /* Adjust the font size as needed */
+    text-align: center;
+}
+
+/* Center the QR code */
+.home-content .qr-code {
+    margin-top: 20px; /* Adjust margin-top as needed */
+}
+
+/* Center the image */
+.home-content .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin-top as needed */
+}
+
+.description {
+    text-align: center; /* Center the text */
+    margin-top: 5px; /* Add some space between the image and the text */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
