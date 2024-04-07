@@ -1,3 +1,6 @@
+from pytezos import pytezos
+from pytezos.rpc.errors import RpcError
+
 #Sample dictionary of recyclable items and their corresponding token values
 recyclable_items = {
     "plastic_bottle": 1,
@@ -41,3 +44,27 @@ if success:
     print("Your updated balance is:", user_balances[user_address])
 else:
     print("Failed to recycle item:", message)
+
+def transfer_nft(sender_address, receiver_address, token_id):
+    tezos = pytezos.using(key=sender_private_key, shell="zero")
+
+    try:
+        operation = (
+            tezos
+            .transfer(receiver_address, token_id)
+            .with_amount(0)
+            .inject(_async=False)
+        )
+        print("Transfer operation hash:", operation['hash'])
+        return operation['hash']
+    except RpcError as e:
+        print("Error:", e)
+
+# Example usage
+if __name__ == "__main__":
+    sender_address = "tz2Vwj5p5FXQFyGD9ak3tKtKpCJxm4KKnHoS"
+    receiver_address = "tz2Repc4fVvXvkYKC2iERpxUew12eFSXxvVM"
+    token_id = "KT1WykvF4QN87jyP9Sc6MoiS1nSyvkwgrzco "
+
+    transfer_nft(sender_address, receiver_address, token_id)
+
