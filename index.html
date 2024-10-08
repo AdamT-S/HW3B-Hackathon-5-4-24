@@ -6,23 +6,24 @@
     <title>Navigation Bar</title>
     <link rel="stylesheet" href="index.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    
 </head>
 <body>
     <div class="top-bar">
         <div class="dropdown">
+            <ion-icon name="Settings" class="icon" onclick="changePage('home')"></ion-icon>
+            <ion-icon name="home-outline" class="icon" onclick="changePage('home')"></ion-icon>
             <ion-icon name="person-circle-outline" class="user-icon" onclick="toggleDropdown()"></ion-icon>
             <div class="dropdown-content" id="dropdownContent">
-                <a href="#">Change Password</a>
-                <a href="#">Change Email</a>
                 <a href="#">Account Settings</a>
-                <a href="#">Delete Account</a>
+                <a href="#">Log Out</a>
             </div>
         </div>
     </div>
-
     <div class="bottom-bar">
         <ion-icon name="home-outline" class="icon" onclick="changePage('home')"></ion-icon>
         <ion-icon name="add-circle-outline" class="icon" onclick="changePage('add')"></ion-icon>
+        <ion-icon name="wallet-outline" class="icon" onclick="changePage('wallet')"></ion-icon>
     </div>  
 
     <div id="content">
@@ -66,30 +67,36 @@
             if (pageName === 'home') {
                 content = `
                     <div class="home-content">
-                        <ion-icon name="wallet-outline" class="wallet-icon"></ion-icon>
+                        <img src="Wallet Icon.png" alt="wallet-image" class="wallet-image">
                         <div class="balance-display">
                             <div class="balance-text">Balance: 100</div>
                         </div>
-                        <img src="envirqr.png" alt="QR Code" class="qr-code">
-                        <div class="image-container">
-                            <img src="enviro-image.png" alt="Enviro Image" class="page-image">
-                        </div>
+                        <img src="github-qr-code.png" alt="QR Code" class="qr-code">
                     </div>`;
             } else if (pageName === 'add') {
                 content = `
                     <div class="add-content">
                         <div class="image-container">
-                            <img src="5-voucher.png" alt="5 Enviropoints" class="page-image">
-                            <p class="description">5 Coupon</p>
+                            <p class="description">Bronze</p>
+                            <img src="5 Point Voucher Rounded.png" alt="5 Enviropoints" class="page-image">
                         </div>
                         <div class="image-container">
-                            <img src="15-voucher.png" alt="15 Enviropoints" class="page-image">
-                            <p class="description">15 Coupon</p>
+                            <p class="description">Silver</p>
+                            <img src="15 Point Voucher Rounded.png" alt="15 Enviropoints" class="page-image">
                         </div>
                         <div class="image-container">
-                            <img src="25-voucher.png" alt="25 Enviropoints" class="page-image">
-                            <p class="description">25 Coupon</p>
+                            <p class="description">Gold</p>
+                            <img src="25 Point Voucher Rounded.png" alt="25 Enviropoints" class="page-image">
                         </div>
+                    </div>`;
+            } else if (pageName === 'wallet') {
+                content = `
+                    <div class="wallet-content">
+                        <img src="Wallet Icon.png" alt="wallet-image" class="wallet-image">
+                        <div class="balance-display">
+                            <div class="balance-text">Balance: 100</div>
+                        </div>
+                        <img src="github-qr-code.png" alt="QR Code" class="qr-code">
                     </div>`;
             }
             // Display the content in the content div
