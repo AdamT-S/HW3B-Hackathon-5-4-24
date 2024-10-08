@@ -1,18 +1,40 @@
 body {
     margin: 0;
-    background-color: #B5E550;
+    background-color: #cefebf;
     font-family: sans-serif;
 }
 
-.top-bar {
-    background-color: #d7f793;
-    text-align: right;
-    padding: 10px;
+.phone-screen {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    
 }
 
-.user-icon {
-    font-size: 2em;
-    color: black;
+.top-bar {
+    text-align: center;
+    padding: 10px 0;
+    justify-content: center;
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for separation */
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.top-bar .icon {
+    font-size: 2.5em;
+    padding: 10px;
+    border-radius: 100%;
+    color: #666666; /* Default icon color */
+}
+
+.top-bar .user-icon {
+    font-size: 2.5em;
+    padding: 10px;
+    color: #666666; /* Default icon color */
     cursor: pointer;
 }
 
@@ -55,14 +77,13 @@ body {
 }
 
 .bottom-bar {
-    background-color: #d7f793;
     text-align: center;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 10px 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for separation */
 }
@@ -77,21 +98,12 @@ body {
 .bottom-bar .icon.active {
     color: white;
     background-color: #f0f0f0; /* Active icon background color */
-    border: 7px solid #f0f0f0; /* Active icon border color */
+    border: 1px solid #f0f0f0; /* Active icon border color */
 }
 
 .add-content .page-image {
     max-width: 200px; /* Adjust image size */
     height: auto;
-}
-
-.home-content .qr-code {
-    max-width: 200px; /* Adjust image size */
-    height: auto;
-    margin-top: 20px; /* Adjust margin-top as needed */
-    display: block; /* Ensure it's a block-level element for centering */
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
 }
 
 /* Add a new class for the balance display */
@@ -103,19 +115,22 @@ body {
     margin-top: 40px; /* Adjust margin-top as needed */
 }
 
-/* Make the icon bigger and center it */
-.home-content .wallet-icon {
-    color: #339111;
-    font-size: 7em; /* Adjust the font size as needed */
-    margin-top: 50px; /* Adjust the top margin */
-    text-align: center; /* Center the icon */
-    justify-content: center;
+.home-content .qr-code {
+    max-width: 200px; /* Adjust image size */
+    height: auto;
+    margin-top: 20px; /* Adjust margin-top as needed */
+    display: block; /* Ensure it's a block-level element for centering */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
 }
 
-/* Center the balance text */
-.balance-text {
-    font-size: 2em; /* Adjust the font size as needed */
-    text-align: center;
+.home-content .wallet-image {
+    max-width: 200px; /* Adjust image size */
+    height: auto;
+    margin-top: 20px; /* Adjust margin-top as needed */
+    display: block; /* Ensure it's a block-level element for centering */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
 }
 
 /* Center the QR code */
@@ -131,6 +146,54 @@ body {
     margin-top: 20px; /* Adjust margin-top as needed */
 }
 
+.wallet-content .qr-code {
+    max-width: 150px; /* Adjust image size */
+    height: auto;
+    margin-top: 20px; /* Adjust margin-top as needed */
+    display: block; /* Ensure it's a block-level element for centering */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+.wallet-content .wallet-image {
+    max-width: 150px; /* Adjust image size */
+    height: auto;
+    margin-top: 100px; /* Adjust margin-top as needed */
+    display: block; /* Ensure it's a block-level element for centering */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+.wallet-content .redeem {
+    max-width: 150px; /* Adjust image size */
+    height: auto;
+    margin-left: 215px; /* Center horizontally */
+    margin-top: 20px;
+}
+
+.wallet-content .myvouchers {
+    max-width: 170px; /* Adjust image size */
+    height: auto;
+    margin-left: 385px; /* Center horizontally */
+    margin-top: -49px;
+    margin-bottom: 100px;
+}
+
+/* Center the image */
+.wallet-content .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+
+/* Center the balance text */
+.balance-text {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    text-align: center;
+}
+
 .description {
     text-align: center; /* Center the text */
     margin-top: 5px; /* Add some space between the image and the text */
@@ -141,3 +204,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+.image-container .voucher5description {
+    margin-top: 100px;
+}
+
+.image-container .voucher5, .image-container .voucher15, .image-container .voucher25 {
+    max-width: 200px;
+    height: auto;
+}
+
